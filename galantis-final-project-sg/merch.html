@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
+  <meta name="author" content="Spencer E Gutterman">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galantis</title>
+  <link rel="icon" type="image/jpg" sizes="32x32" href="./assets/images/favicon-32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="./assets/images/favicon-16x16.jpg">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+
+</head>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="index.html"><img class="logo" src="./assets/images/galantishome/logoclear.png" style="max-width:100%;height:auto;" alt="Galantis text logo" /></a>
+          <div id="MenuIcon" class="mobile-menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <nav id="MainMenu" class="col-xs-12 col-sm-8">
+          <a href="about.html">About</a>
+          <a href="discography.html">Discography</a>
+          <a href="media.html">Media</a>
+          <a class="active" href="merch.html">Merch</a>
+          <a href="tour-dates.html">Tour Dates</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="page-banner merch-banner">
+      <h1 class="secondary-font banner-title">Merch Store</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="merch-controls">
+            <li data-filter="all">
+              <button class="merch-ctrl-btn active all-icon">All items</button>
+            </li>
+            <li data-filter="topwear">
+              <button class="merch-ctrl-btn">
+                <span>Topwear</span>
+                <img src="./assets/images/galantismerch/icons/008-shirt.svg" style="max-width:100%;height:auto;" />
+              </button>
+            </li>
+            <li data-filter="bottomwear">
+              <button class="merch-ctrl-btn bottomwear-icon">
+                <span>Bottomwear</span>
+                <img src="./assets/images/galantismerch/icons/009-shorts.svg" style="max-width:100%;height:auto;"/>
+              </button>
+            </li>
+            <li data-filter="headwear">
+              <button class="merch-ctrl-btn headwear-icon">
+                <span>Alternate</span>
+                <img src="./assets/images/galantismerch/icons/011-sock.svg" style="max-width:100%;height:auto;"/>
+              </button>
+            </li>
+            <li data-filter="accessories">
+              <button class="merch-ctrl-btn accessories-icon">
+                <span>Accessories</span>
+                <img src="./assets/images/galantismerch/icons/016-tank top.svg" style="max-width:100%;height:auto;"/>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="filtr-container row">
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops1.png" style="max-width:100%;height:auto;"
+            alt="Blue Galantis Jacket"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --limited" data-category="headwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/hat1.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis Hat"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops4.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis Crew Jacket"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --limited" data-category="bottomwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/bottoms1.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis Shorts"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops5.png" style="max-width:100%;height:auto;"
+            alt="White Galantis Hoodie"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/bundle1.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis shirts with Galantis stickers"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --limited" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops6.png" style="max-width:100%;height:auto;"
+            alt="White Galantis Jacket"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops2.png" style="max-width:100%;height:auto;"
+            alt="Long sleeve black Galantis shirt and Crew Sweater"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --limited" data-category="accessories" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/bundle2.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis shirts with poster"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/galantismerch/tops3.png" style="max-width:100%;height:auto;"
+            alt="Black Galantis shirt with skull fox"
+          />
+        </div>
+      </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+  <p>Project by Spencer Gutterman</p>
+  <p>*This is not the official Galantis website. All elements are for personal development only.*</p>
+</div>
+
+  </main>
+</body>
+
+<script src="./assets/javascripts/jquery-3.3.1.min.js"></script>
+<script src="./assets/javascripts/jquery.filterizr.min.js"></script>
+<script src="./assets/javascripts/lodash.js"></script>
+<script src="./assets/javascripts/mobile-menu.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.filtr-container').filterizr({});
+    $('.merch-ctrl-btn').click(function(){
+      if($(this).hasClass('active')){
+        return false;
+      } else {
+        $('.merch-ctrl-btn').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+  });
+</script>
+
+</html>

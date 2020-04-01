@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
+  <meta name="author" content="Spencer Gutterman">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 64px;
+    text-align: center;
+    background-color: #ffccff;
+  }
+  {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #ffccff;
+    color: black;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    background-color: #ffccff;
+    color: black;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 70px;
+  }
+
+  .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     background-color: black;
+     color: white;
+     text-align: center;
+  }
+
+
+  </style>
+  <title>Galantis</title>
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
+  <link rel="icon" type="image/jpg" sizes="32x32" href="./assets/images/favicon-32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="./assets/images/favicon-16x16.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="index.html"><img class="logo" src="./assets/images/galantishome/logoclear.png" style="max-width:100%;height:auto;" alt="Galantis text logo" /></a>
+          <div id="MenuIcon" class="mobile-menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <nav id="MainMenu" class="col-xs-12 col-sm-8">
+          <a href="about.html">About</a>
+          <a href="discography.html">Discography</a>
+          <a href="media.html">Media</a>
+          <a href="merch.html">Merch</a>
+          <a class="active" href="tour-dates.html">Tour Dates</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="page-banner tour-dates-banner">
+      <h1 class="secondary-font banner-title">Tour Dates</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12" style="overflow-x:auto;">
+            <table style="width: 100%; min-width: 1200px">
+          <h1></h1>
+        </div>
+
+        <h1> August </h1>
+        <div class="row">
+
+          <div class="flip-card"">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 14th</h1>
+                <p>Las Vegas</p>
+                <p>Encore Beach Club Nightswim</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.tixr.com/groups/ebcatnight/events/wynn-las-vegas-galantis-nightswim-13285" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 16th</h1>
+                <p> Kansas City</p>
+                <p>Coors Light Block Party</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="http://www.powerandlightdistrict.com/events/20190816_-galantis" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 17th</h1>
+                <p>Salt Lake City</p>
+                <p>Das Energi</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://dasenergifestival.com/tickets/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 18th</h1>
+                <p>Winnipeg</p>
+                <p>Summer of Sound 2020</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.summerofsound.ca/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 28th</h1>
+                <p>Las Vegas</p>
+                <p>Encore Beach Club Nightswim</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.tixr.com/groups/ebcatnight/events/wynn-las-vegas-galantis-nightswim-13290" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 30th</h1>
+                <p>San Diego</p>
+                <p>Tramps Like Us</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.eventbrite.com/e/tramps-like-us-tickets-62738954903?_eboga=909231622.1561127996" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Aug 31st</h1>
+                <p>Orlando</p>
+                <p>Central Florida Fairgrounds</p>
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://wl.seetickets.us/event/Frequency-Burst-ORLANDO/385442?afflky=DiscoDonnie" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+</div>
+</div>
+
+
+<div class="container">
+
+
+<h1> September </h1>
+<div class="row">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 1st</h1>
+                <p>San Antonio</p>
+                <p>Cowboys Dance Hall</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://wl.seetickets.us/event/Galantis-SAN-ANTONIO/388351?afflky=DiscoDonnie" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 6th</h1>
+                <p>New Albany</p>
+                <p>A&F Challenge</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://anfchallenge.org/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 7th</h1>
+                <p>Miami</p>
+                <p>LIV</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.tixr.com/groups/liv/events/galantis-14554" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 14th</h1>
+                <p>Tokyo</p>
+                <p>Ultra Japan</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://ultrajapan.com/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 15th</h1>
+                <p>Tokyo</p>
+                <p>Ultra Japan</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://ultrajapan.com/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 20th</h1>
+                <p>Milwaukee</p>
+                <p>Eagles Ballroom</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.etix.com/ticket/p/3919917/galantis-milwaukee-the-rave-eagles-club" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Sep 21st</h1>
+                <p>Lansing</p>
+                <p>Prime Music Festival</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.primefestival.com/" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container">
+
+
+          <h1> October </h1>
+          <div class="row">
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <h1>Oct 18th</h1>
+                          <p>Los Angeles</p>
+                          <p>The Shrine</p>
+
+                        </div>
+                        <div class="flip-card-back">
+                          <h2><a href="https://www.axs.com/events/374094/galantis-tickets" target="_blank">Purchase Tickets</a>
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Oct 19th</h1>
+                <p>Los Angeles</p>
+                <p>The Shrine</p>
+
+              </div>
+              <div class="flip-card-back">
+                <h2><a href="https://www.axs.com/events/374094/galantis-tickets" target="_blank">Purchase Tickets</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="footer">
+  <p>Project by Spencer Gutterman</p>
+  <p>*This is not the official Galantis website. All elements are for personal development only.*</p>
+</div>
+
+  </main>
+</body>
+<script src="./assets/javascripts/jquery-3.3.1.min.js"></script>
+<script src="./assets/javascripts/lodash.js"></script>
+<script src="./assets/javascripts/mobile-menu.js"></script>
+</html>
